@@ -4,48 +4,76 @@
 //Title
 //Review Rating
 //Delete option for movies
+{
+    const url = "https://nine-shared-text.glitch.me/movies"
+    console.log(url);
 
-const url = "https://nine-shared-text.glitch.me/movies"
-console.log(url);
+    let allSandlerMovies = [];
+    let sandlerSample = {
+        "title": "",
+        "minutes": "",
+        "review": "",
+        "rating": "",
+        "poster": "",
+        "trailer": "",
+        "year": "",
+        "genre": "",
+        "director": "",
+        "actor": "",
+        "id": "",
+    }
+    let title = ${"#title"};
+    let minutes = ${"#minutes"};
+    let review = ${"#review"};
+    let rating = ${"#rating"};
+    let poster = ${"#poster"};
+    let trailer = ${"#trailer"};
+    let year = ${"#year"};
+    let genre = ${"#genre"};
+    let director = ${"#director"};
+    let actor = ${"#actor"};
+    let id = ${".id"};
 
-function logMatchingMovies(){
-    let allMovies = [];
-    if(filteredMovies.length < 1){
-        filteredMovies = allOfOurMovies;
-    }
-    if(coffeeName.value.length > 0) {
-        filteredCoffees.forEach((movie) => {
-            if (movie.name.toLowerCase().includes(movieName.value.toLowerCase())) {
-                allMovies.push(movie);
-            }
-        });
-        allMoviesSpot.innerHTML = renderMovies(allMovies);
-    } else {
-        allMoviesSpot.innerHTML = renderMovies(filteredMovies);
-    }
 }
-movieName.addEventListener("input", logMatchingMovies);
-//=========COFFEE SEARCH=========//
-
-
-//--------ADD CUSTOM COFFEE----------//
-var customRoast = document.getElementById("customMovieGenre");
-var customName = document.getElementById("customMovieName");
-var addCustom = document.getElementById("customMovieButton");
-
-
-addCustom.addEventListener("click", function (){
-    addCustom.disabled = true;
-    var movieChoice = customMovie.value;
-    var nameChoice = customName.value;
-
-    var newCoffee = {};
-    newCoffee.id = (allOfOurCoffees[(allOfOurCoffees.length-1)].id) + 1;
-    newCoffee.name = nameChoice;
-    newCoffee.roast = roastChoice;
-
-    allOfOurCoffees.push(newCoffee);
-    setTimeout(reEnableCoffeeAdding, 1000);
-});
+// This is what Matt and I had in the coffee project. I changed "coffee" to "movie" i
+// function logMatchingMovies(){
+//     let allMovies = [];
+//     if(filteredMovies.length < 1){
+//         filteredMovies = allOfOurMovies;
+//     }
+//     if(coffeeName.value.length > 0) {
+//         filteredCoffees.forEach((movie) => {
+//             if (movie.name.toLowerCase().includes(movieName.value.toLowerCase())) {
+//                 allMovies.push(movie);
+//             }
+//         });
+//         allMoviesSpot.innerHTML = renderMovies(allMovies);
+//     } else {
+//         allMoviesSpot.innerHTML = renderMovies(filteredMovies);
+//     }
+// }
+// movieName.addEventListener("input", logMatchingMovies);
+// //=========COFFEE SEARCH=========//
+//
+//
+// //--------ADD CUSTOM COFFEE----------//
+// var customRoast = document.getElementById("customMovieGenre");
+// var customName = document.getElementById("customMovieName");
+// var addCustom = document.getElementById("customMovieButton");
+//
+//
+// addCustom.addEventListener("click", function (){
+//     addCustom.disabled = true;
+//     var movieChoice = customMovie.value;
+//     var nameChoice = customName.value;
+//
+//     var newCoffee = {};
+//     newCoffee.id = (allOfOurCoffees[(allOfOurCoffees.length-1)].id) + 1;
+//     newCoffee.name = nameChoice;
+//     newCoffee.roast = roastChoice;
+//
+//     allOfOurCoffees.push(newCoffee);
+//     setTimeout(reEnableCoffeeAdding, 1000);
+// });
 // function reEnableCoffeeAdding(){
 //     addCustom.disabled = false;
