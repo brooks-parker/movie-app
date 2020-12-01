@@ -1,0 +1,459 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--    ****Bootstrap-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+          integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <!--    ****CSS Stylesheet-->
+    <link rel="stylesheet" type="text/css" href="css/movie-app.css">
+    <title class="title">Six Degrees of Sandler</title>
+</head>
+<body>
+<!--Loading Screen-->
+<h1 id="loading">
+    LOADING...<br>
+    <img id="loadImage" alt="..." src="img/sixDegrees.gif">
+    <br>LOADING...
+</h1>
+
+
+<header>
+    <h1>SIX DEGREES OF SANDLER</h1>
+    <div class="jumbotron-fluid postLoading" id="jumbo">
+        <img src="img/header.jpg">
+        <!--        ****Our search bar-->
+        <nav class="navbar navbar-dark bg-dark">
+            <form class="form-inline">
+                <input class="form-control mr-sm-2" type="search" placeholder="50 First Searches" aria-label="Search">
+                <button class="btn btn-outline-light" type="submit" id="clickButton">Select to Search</button>
+            </form>
+        </nav>
+        <div class="postLoading">
+            <!--CAROUSEL WITHIN ACCORDION -->
+            <div class="container" id="accordion">
+                <div class="genre-card" id="comedy">
+                    <div id="carouselFadeComedy" class="carousel slide carousel-fade" data-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img id=slideComedy1 alt="..." src=""/>
+                            </div>
+                            <div class="carousel-item">
+                                <img id=slideComedy2 alt="..." src=""/>
+                            </div>
+                            <div class="carousel-item">
+                                <img id=slideComedy3 alt="..." src=""/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-header">
+                        COMEDY
+                    </div>
+                </div>
+                <div class="genre-card" id="drama">
+                    <div id="carouselFadeDrama" class="carousel slide carousel-fade" data-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img id=slideDrama1 alt="..." src=""/>
+                            </div>
+                            <div class="carousel-item">
+                                <img id=slideDrama2 alt="..." src=""/>
+                            </div>
+                            <div class="carousel-item">
+                                <img id=slideDrama3 alt="..." src=""/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-header">
+                        DRAMA
+                    </div>
+                </div>
+                <div class="genre-card" id="romance">
+                    <div id="carouselFadeRomance" class="carousel slide carousel-fade" data-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img id=slideRomance1 alt="..." src=""/>
+                            </div>
+                            <div class="carousel-item">
+                                <img id=slideRomance2 alt="..." src=""/>
+                            </div>
+                            <div class="carousel-item">
+                                <img id=slideRomance3 alt="..." src=""/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-header">
+                        ROMANCE
+                    </div>
+                </div>
+                <div class="genre-card" id="animation">
+                    <div id="carouselFadeAnimation" class="carousel slide carousel-fade justify-content-center" data-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img id=slideAnimation1 alt="..." src=""/>
+                            </div>
+                            <div class="carousel-item">
+                                <img id=slideAnimation2 alt="..." src=""/>
+                            </div>
+                            <div class="carousel-item">
+                                <img id=slideAnimation3 alt="..." src=""/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-header">
+                        ANIMATION
+                    </div>
+                </div>
+                <div class="genre-card" id="sports">
+                    <div id="carouselFadeSports" class="carousel slide carousel-fade" data-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img id=slideSports1 alt="..." src=""/>
+                            </div>
+                            <div class="carousel-item">
+                                <img id=slideSports2 alt="..." src=""/>
+                            </div>
+                            <div class="carousel-item">
+                                <img id=slideSports3 alt="..." src=""/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-header">
+                        SPORTS
+                    </div>
+                </div>
+                <div class="genre-card" id="all">
+                    <div id="carouselFadeAll" class="carousel slide carousel-fade" data-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img id=slideAll1 alt="..." src=""/>
+                            </div>
+                            <div class="carousel-item">
+                                <img id=slideAll2 alt="..." src=""/>
+                            </div>
+                            <div class="carousel-item">
+                                <img id=slideAll3 alt="..." src=""/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-header">
+                        ALL GENRE
+                    </div>
+                </div>
+            </div>
+            <!--</div>-->
+            <!--    <div id="bannerImage">-->
+            <!--        <img id="postLoadImage" alt="..." src="img/adamGif.gif">-->
+            <!--    </div>-->
+        </div>
+    </div>
+</header>
+
+<!--<div class="container">-->
+
+<!--    <div class="row">-->
+
+<!--        &lt;!&ndash;START CARDS&ndash;&gt;-->
+<!--        <div id="cards-container" class="col-8 col-md-8">-->
+
+<!--        </div>-->
+
+<!--        &lt;!&ndash;END CARDS&ndash;&gt;-->
+<!--        &lt;!&ndash;START FORM&ndash;&gt;-->
+<!--        <form>-->
+<!--            <div class="col-12 col-md-12">-->
+
+<!--                &lt;!&ndash;TITLE&ndash;&gt;-->
+<!--                <div class="form-group">-->
+<!--                    <label for="movie-title">Title</label>-->
+<!--                    <input type="text" class="form-control movie-title" id="movie-title" placeholder="Enter movie Title">-->
+<!--                </div>-->
+<!--                &lt;!&ndash;YEAR&ndash;&gt;-->
+<!--                <div class="form-group">-->
+<!--                    <label for="movie-year">Year</label>-->
+<!--                    <input type="text" class="form-control movie-year" id="movie-year" placeholder="Enter Year">-->
+<!--                </div>-->
+<!--                &lt;!&ndash;RATING&ndash;&gt;-->
+<!--                <div class="form-group">-->
+<!--                    <label for="movie-rating">Rating</label>-->
+<!--                    <select class="form-control movie-rating" id="movie-rating">-->
+<!--                        <option>&#45;&#45;Choose Movie Rating&#45;&#45;</option>-->
+<!--                        <option>1</option>-->
+<!--                        <option>2</option>-->
+<!--                        <option>3</option>-->
+<!--                        <option>4</option>-->
+<!--                        <option>5</option>-->
+<!--                    </select>-->
+<!--                </div>-->
+<!--                &lt;!&ndash;PLOT&ndash;&gt;-->
+<!--                <div class="form-group">-->
+<!--                    <label for="movie-plot">Plot</label>-->
+<!--                    <textarea class="form-control" id="movie-plot" rows="3"></textarea>-->
+<!--                </div>-->
+<!--                &lt;!&ndash;GENRE&ndash;&gt;-->
+<!--                <div class="form-group">-->
+<!--                    <label for="movie-genre">Genre</label>-->
+<!--                    <input type="text" class="form-control movie-genre" id="movie-genre" placeholder="Enter genre">-->
+<!--                </div>-->
+<!--                &lt;!&ndash;DIRECTOR&ndash;&gt;-->
+<!--                <div class="form-group">-->
+<!--                    <label for="movie-director">Director</label>-->
+<!--                    <input type="text" class="form-control director" id="movie-director" placeholder="Enter director Name">-->
+<!--                </div>-->
+<!--                &lt;!&ndash;CAST&ndash;&gt;-->
+<!--                <div class="form-group">-->
+<!--                    <label for="movie-actors">Actors</label>-->
+<!--                    <input type="text" class="form-control movie-actors" id="movie-actors" placeholder="Enter Cast Names">-->
+<!--                </div>-->
+<!--                <button id="add-movie-btn">Add Movie</button>-->
+<!--            </div>-->
+
+<!--        </form>-->
+
+<!--    </div>-->
+<!--    &lt;!&ndash;END FORM&ndash;&gt;-->
+
+<!--</div>-->
+<!--</div>-->
+
+<!--    <main>-->
+<!--&lt;!&ndash;**** Loading Image&ndash;&gt;-->
+<!--<div id="loading" class="loader"></div>-->
+
+<!--&lt;!&ndash;-&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45; MODAL &#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&ndash;&gt;-->
+<!--<div class="modal" id="modal-1" tabindex="-1" role="dialog">-->
+<!--    <div class="modal-dialog" role="document">-->
+<!--        <div class="modal-content">-->
+<!--            <div>-->
+<!--                <section class="options">-->
+<!--                    <div class="tab">-->
+<!--                        <button class="tablinks" onclick="openTab(event, 'more')" id="defaultOpen">More Info</button>-->
+<!--                        <button class="tablinks" onclick="openTab(event, 'edit')">Edit</button>-->
+<!--                        <button class="tablinks delete" onclick="openTab(event, 'delete')">Delete</button>-->
+<!--                    </div>-->
+
+<!--                    <div id="more" class="tabcontent"></div>-->
+
+<!--                    <div id="edit" class="tabcontent">-->
+<!--                        <div class="form-group">-->
+<!--                            <label for="editTitle" class="required">Title</label>-->
+<!--                            <input id="editTitle" type="text" name="edit-title" class="form-control"-->
+<!--                                   placeholder="Edit Title" required="required">-->
+<!--                        </div>-->
+<!--                        <div class="form-group">-->
+<!--                            <label for="editMinutes" class="required">How Many Minutes?</label>-->
+<!--                            <input id="editMinutes" type="text" name="edit-minutes" class="form-control"-->
+<!--                                   placeholder="How long is your movie?" required="required">-->
+<!--                        </div>-->
+<!--                        <div class="form-group">-->
+<!--                            <label for="editReview" class="required">Review</label>-->
+<!--                            <input id="editReview" type="text" name="edit-review" class="form-control"-->
+<!--                                   placeholder="Rate Movie 1-10" required="required">-->
+<!--                        </div>-->
+<!--                        <div class="form-group">-->
+<!--                            <label for="editRating" class="required">Rating</label>-->
+<!--                            <input id="editRating" type="text" name="edit-rating" class="form-control"-->
+<!--                                   placeholder="G, PG, PG-13, R, MA, or None" required="required">-->
+<!--                        </div>-->
+<!--                        <div class="form-group">-->
+<!--                            <label for="editYear" class="required">Year</label>-->
+<!--                            <input id="editYear" type="text" name="edit-year" class="form-control"-->
+<!--                                   placeholder="Add New Year" required="required">-->
+<!--                        </div>-->
+<!--                        <div class="form-group">-->
+<!--                            <label for="editGenre" class="required">Genre</label>-->
+<!--                            <input id="editGenre" type="text" name="edit-genre" class="form-control"-->
+<!--                                   placeholder="Add New Genre" required="required">-->
+<!--                        </div>-->
+<!--                        <div class="form-group">-->
+<!--                            <label for="editPlot" class="required">Plot</label>-->
+<!--                            <input id="editPlot" type="text" name="edit-Plot" class="form-control"-->
+<!--                                   placeholder="Add A New Plot" required="required">-->
+<!--                        </div>-->
+<!--                        <div class="form-group">-->
+<!--                            <label for="editActors" class="required">Actors</label>-->
+<!--                            <input id="editActors" type="text" name="edit-Actors" class="form-control"-->
+<!--                                   placeholder="Add the Actors" required="required">-->
+<!--                        </div>-->
+
+<!--                        <input id="editButton" class="btn" type="submit" value="Edit Movie">-->
+<!--                    </div>-->
+
+<!--                    <div id="delete" class="tabcontent">-->
+<!--                        <p class="text-center">Are you sure you want to delete?</p>-->
+<!--                        <div class="text-center">-->
+<!--                            <button id="deleteMovie" class="btn">Yes</button>-->
+<!--                            <button class="btn">No</button>-->
+<!--                        </div>-->
+<!--                    </div>-->
+
+<!--                </section>-->
+<!--            </div>-->
+<!--            <div class="text-right mt-20"> &lt;!&ndash; text-right = text-align: right, mt-20 = margin-top: 2rem (20px) &ndash;&gt;-->
+<!--                <a href="#" class="closeBtn btn mr-5" role="button">Close</a>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</div>-->
+<!--<header>-->
+<!--</header>-->
+<!--&lt;!&ndash;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;NAVBAR-&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&ndash;&gt;-->
+
+
+
+<!--            &lt;!&ndash; dropdown add (inline form) &ndash;&gt;-->
+<!--            <div class="dropdown ml-auto mr-20 ">-->
+<!--                <button class="btn btn-outline-light" data-toggle="dropdown" type="button" id="sign-in-dropdown-toggle-btn"-->
+<!--                        aria-haspopup="true">-->
+<!--                    Add Movie <i class="fa fa-angle-down ml-5" aria-hidden="true"></i>-->
+<!--                </button>-->
+<!--                <div class="dropdown-menu w-400 w-sm-350 dropdown-menu-right" aria-labelledby="sign-in-dropdown-toggle-btn">-->
+<!--                    &lt;!&ndash; w-250 = width: 25rem (250px), w-sm-350 = width: 35rem (350px) only on devices where width > 576px &ndash;&gt;-->
+<!--                    <div class="dropdown-content p-20">-->
+<!--                        <div class="form-group">-->
+<!--                            <label for="addTitle" class="required">Title</label>-->
+<!--                            <input id="addTitle" type="text" name="title" class="form-control"-->
+<!--                                   placeholder="Add New Title" required="required">-->
+<!--                        </div>-->
+<!--                        <div class="form-group">-->
+<!--                            <label for="addMinutes" class="required">Minutes</label>-->
+<!--                            <input id="addMinutes" type="text" name="Minutes" class="form-control"-->
+<!--                                   placeholder="Movie Length?" required="required">-->
+<!--                        </div>-->
+<!--                        <div class="form-group">-->
+<!--                            <label for="addReview" class="required">Review</label>-->
+<!--                            <input id="addReview" type="text" name="Review" class="form-control"-->
+<!--                                   placeholder="Rate: 1 to 10" required="required">-->
+<!--                        </div>-->
+<!--                        <div class="form-group">-->
+<!--                            <label for="addRating" class="required">Rating</label>-->
+<!--                            <input id="addRating" type="text" name="rating" class="form-control"-->
+<!--                                   placeholder="G, PG, PG-13, R, MA or None" required="required">-->
+<!--                        </div>-->
+<!--                        <div class="form-group">-->
+<!--                            <label for="addYear" class="required">Year</label>-->
+<!--                            <input id="addYear" type="text" name="year" class="form-control"-->
+<!--                                   placeholder="Release date?" required="required">-->
+<!--                        </div>-->
+<!--                        <div class="form-group">-->
+<!--                            <label for="addGenre" class="required">Genre</label>-->
+<!--                            <input id="addGenre" type="text" name="genre" class="form-control"-->
+<!--                                   placeholder="Add New Genre" required="required">-->
+<!--                        </div>-->
+<!--                        <input id="addButton" class="btn btn-primary btn-block" type="submit" value="Add New Movie">-->
+<!--                    </div>-->
+
+<!--                </div>-->
+<!--            </div>-->
+<!--    <button type="button" class="btn btn-outline-light" data-toggle="modal" data-target="#add-form">Add a movie to our database!</button>-->
+<!--    &lt;!&ndash; Add Movie Modal &ndash;&gt;-->
+<!--    <div class="modal fade modal-form" id="add-form" tabindex="-1" aria-labelledby="exampleModalLabel"-->
+<!--         aria-hidden="true">-->
+<!--        <div class="modal-dialog">-->
+<!--            <div class="modal-content">-->
+<!--                <div class="modal-header">-->
+<!--                    <h5 class="modal-title" id="exampleModalLabel">Want to add your own movie?:</h5>-->
+<!--                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">-->
+<!--                        <span aria-hidden="true">&times;</span>-->
+<!--                    </button>-->
+<!--                </div>-->
+<!--                <div class="modal-body">-->
+<!--                    <form id="addition">-->
+<!--                        <label for="add-title" class="my-3">Title:</label>-->
+<!--                        <input type="text" id="add-title">-->
+<!--                        <br>-->
+<!--                        <label for="add-rating">Movie Rating:</label>-->
+<!--                        <select name="add-rating" id="add-rating" class="mr-3">-->
+<!--                            <option value="G">G</option>-->
+<!--                            <option value="PG">PG</option>-->
+<!--                            <option value="PG-13">PG-13</option>-->
+<!--                            <option value="R">R</option>-->
+<!--                            <option value="MA">MA</option>-->
+<!--                            <option value="NONE">None</option>-->
+<!--                        </select>-->
+<!--                        <label for="add-ranking">Movie Ranking:</label>-->
+<!--                        <select name="add-ranking" id="add-ranking">-->
+<!--                            <option value="1">1</option>-->
+<!--                            <option value="2">2</option>-->
+<!--                            <option value="3">3</option>-->
+<!--                            <option value="4">4</option>-->
+<!--                            <option value="5">5</option>-->
+<!--                            <option value="1">6</option>-->
+<!--                            <option value="2">7</option>-->
+<!--                            <option value="3">8</option>-->
+<!--                            <option value="4">9</option>-->
+<!--                            <option value="5">10</option>-->
+<!--                        </select>-->
+<!--                        <hr>-->
+<!--                        <p>Genre: (select all that apply)</p>-->
+<!--                        <input class="checkBoxes2" type="checkbox" id="comedy" name="comedy"-->
+<!--                               value="comedy">-->
+<!--                        <label for="comedy">Comedy</label><br>-->
+<!--                        <input class="checkBoxes2" type="checkbox" id="drama" name="drama" value="drama">-->
+<!--                        <label for="drama">Drama</label><br>-->
+<!--                        <input class="checkBoxes2" type="checkbox" id="family" name="family"-->
+<!--                               value="family">-->
+<!--                        <label for="family">Family</label><br>-->
+<!--                        <input class="checkBoxes2" type="checkbox" id="romcom" name="romcom" value="romcom">-->
+<!--                        <label for="romcom">Rom-Com</label><br>-->
+<!--                        <input class="checkBoxes2" type="checkbox" id="shorts" name="shorts" value="shorts">-->
+<!--                        <label for="shorts">Shorts</label><br>-->
+<!--                        <input class="checkBoxes2" type="checkbox" id="tvShow" name="tvShow" value="tvShow">-->
+<!--                        <label for="tvShow">TV Shows</label><br>-->
+<!--                        <br>-->
+<!--                        <label for="add-des" class="mt-2">Movie Description:</label>-->
+<!--                        <br>-->
+<!--                        <textarea onkeyup="counter(this)" class="w-100" name="add-des" id="add-des" cols="30" rows="5"-->
+<!--                                  maxlength="256" placeholder="What is the movie about?"></textarea>-->
+<!--                        <p class="charNum text-right"></p>-->
+<!--                    </form>-->
+<!--                </div>-->
+<!--                <div class="modal-footer">-->
+<!--                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>-->
+<!--                    <button id="update-data" type="button" class="btn purp" data-dismiss="modal">Add-->
+<!--                        Movie-->
+<!--                    </button>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</nav>-->
+
+
+<!--    <div class="container">-->
+<!--        <div class="row">-->
+<!--             <div class="col-12 col-md-6 col-lg-4 col-xl-3 mt-5">-->
+<!--                <div class="card">-->
+<!--                    <img src="img/Sandlerhead.jpg" class="card-img-top" alt="Movie Poster">-->
+<!--                    <div class="card-body">-->
+<!--                        <h4 class="card-title">Movie Title:</h4>-->
+<!--                        <p class="minutes">90 minutes</p>-->
+<!--                        <p class="review">Review: 5.4</p>-->
+<!--                        <p class="rating">Rating: R</p>-->
+<!--                        <p class="yearReleased">Year Released: 2020</p>-->
+<!--                        <p class="genre">Genre: Comedy</p>-->
+<!--                        <p class="director">Director: Daniel Dugan</p>-->
+<!--                        <p class="card-text">Plot.</p>-->
+<!--                        <a href="#" class="btn btn-primary">See the trailer</a>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</main>-->
+<script src="https://code.jquery.com/jquery-2.2.4.min.js"
+        integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+<script src="js/keys.js"></script>
+<script src="js/movie-app.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js"
+        integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s"
+        crossorigin="anonymous"></script>
+<div class="modal"><!-- Place at bottom of page --></div>
+</body>
+</html>
